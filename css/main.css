@@ -103,6 +103,13 @@ ul li {
     transition: padding 0.3s; }
   #header .logo {
     float: left; }
+  #header .noLogo {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
 
 #header.fixed {
   background-color: #292c47; }
