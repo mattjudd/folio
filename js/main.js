@@ -23,7 +23,7 @@ $(document).ready(function() {
 	});
 
 	// Fancybox
-	$('.work-box').fancybox();
+	$('.fancy-box').fancybox();
 
 	// Flexslider
 	$('.flexslider').flexslider({
@@ -60,9 +60,43 @@ $(document).ready(function() {
 		$(this).toggleClass('close-nav');
 		nav.toggleClass('open');
 		return false;
-	});	
+	});
 	nav.find('a').on('click', function() {
 		$('.nav-toggle').toggleClass('close-nav');
 		nav.toggleClass('open');
 	});
+});
+
+
+//Matt's custom folio displays
+
+//opening
+$(".work-box").click(function(){
+	var displayID = "#" + $(this).attr('id') + "-display";
+	$(displayID).show('fast');
+});
+
+//closing
+$(".sampleBlock-footer button").click(function(){
+	$(".sampleBlock").hide('fast');
+});
+$(document).mouseup(function(e)
+{
+    var container = $(".sampleBlock");
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0)
+    {
+        container.hide('fast');
+    }
+});
+$(window).keyup(function(event) {
+    if(event.which === 27) {
+        $('.sampleBlock').hide('fast');
+    }
+});
+
+//special set-up for folio4 to support iframe video not starting on page load.
+$("#folio4").click(function(){
+	$("#folio4-display iframe").attr('src',"https://dcms.datacreative.com.au/williamAngliss/iframe");
+
 });

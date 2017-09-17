@@ -289,6 +289,11 @@ ul li {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     text-transform: uppercase; }
+    .banner-text h2 {
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: normal;
+    }
   .banner-text p {
     color: #fff;
     font-size: 22px;
@@ -375,6 +380,87 @@ ul li {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
+
+    /* ==========================================================================
+    	$display modals
+    ========================================================================== */
+
+.sampleBlock {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  z-index: 1001;
+  left: 25%;
+  top: 25%;
+  background-color: rgba(256,256,256,0.95);
+  border: 5px solid black;
+  display: none;
+  -moz-transition: opacity, 0.3s;
+  -o-transition: opacity, 0.3s;
+  -webkit-transition: opacity, 0.3s;
+  transition: opacity, 0.3s;
+  color: #444;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.sampleContent {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.sampleContent iframe {
+  flex-shrink: 1;
+}
+.video-presentation {
+  vertical-align: bottom;
+  text-align: center;
+  width: 100%;
+}
+.sampleBlock-footer {
+  position: absolute;
+  right: 2.5%;
+  width: 95%;
+  bottom: 0px;
+  z-index: 1010;
+  background-color: rgba(256,256,256,0.8);
+  margin-bottom: 8px;
+  padding: 5px 15px;
+}
+.sampleBlock-footer .btn {
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+.sampleBlock-caption {
+  text-align: left;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+    .sampleBlock {
+      width: 60%;
+      height: 60%;
+      left: 20%;
+  }
+}
+@media screen and (max-width: 740px) {
+    .sampleBlock {
+      width: 80%;
+      top: 10%;
+      height: 80%;
+      left: 10%;
+  }
+}
+@media screen and (max-width: 420px) {
+    .sampleBlock {
+      width: 92%;
+      left: 4%;
+  }
+}
 /* ==========================================================================
 	$Teams
 ========================================================================== */
@@ -411,6 +497,11 @@ ul li {
       background-color: #e84545;
       border-color: #e84545;
       color: #fff; }
+
+/**compensating for no team presentation **/
+#teams {
+  padding: 40px;
+}
 
 /* ==========================================================================
 	$Testimonials
