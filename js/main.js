@@ -76,9 +76,13 @@ $(".work-box").click(function(){
 	$(displayID).show('fast');
 });
 
-//closing
+//closing display
+function onHideRemoveiFrameSrc() {
+	$(".sampleBlock iframe").attr('src',"");
+}
+
 $(".sampleBlock-footer button").click(function(){
-	$(".sampleBlock").hide('fast');
+	$(".sampleBlock").hide('fast',onHideRemoveiFrameSrc);
 });
 $(document).mouseup(function(e)
 {
@@ -86,17 +90,34 @@ $(document).mouseup(function(e)
     // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0)
     {
-        container.hide('fast');
+        container.hide('fast', onHideRemoveiFrameSrc);
     }
 });
 $(window).keyup(function(event) {
     if(event.which === 27) {
-        $('.sampleBlock').hide('fast');
+        $('.sampleBlock').hide('fast',onHideRemoveiFrameSrc);
     }
 });
 
 //special set-up for folio4 to support iframe video not starting on page load.
+$("#folio1").click(function(){
+	$("#folio1-display iframe").attr('src',"https://www.youtube.com/embed/efmbRtpkjr0");
+});
+$("#folio2").click(function(){
+	$("#folio2-display iframe").attr('src',"https://www.youtube.com/embed/zQB-TGrnA-s");
+});
+$("#folio3").click(function(){
+	$("#folio3-display iframe").attr('src',"https://www.youtube.com/embed/5UkSdcYVbbo");
+});
 $("#folio4").click(function(){
 	$("#folio4-display iframe").attr('src',"https://dcms.datacreative.com.au/williamAngliss/iframe");
-
+});
+$("#folio5").click(function(){
+	$("#folio5-display iframe").attr('src',"https://www.youtube.com/embed/0Mdg4yOkwcA");
+});
+$("#folio6").click(function(){
+	$("#folio6-display iframe").attr('src',"https://www.youtube.com/embed/JyTKyKdz4oE");
+});
+$("#folio7").click(function(){
+	$("#folio7-display iframe").attr('src',"https://www.youtube.com/embed/n2icSEuDK9Q");
 });

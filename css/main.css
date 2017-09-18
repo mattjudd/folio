@@ -388,6 +388,7 @@ ul li {
 .sampleBlock {
   position: fixed;
   width: 50%;
+  max-width: 700px;
   height: 50%;
   z-index: 1001;
   left: 25%;
@@ -432,8 +433,8 @@ ul li {
 }
 .sampleBlock-footer .btn {
   position: absolute;
-  right: 0;
-  top: -40px;
+  right: 5px;
+  top: 5px;
 }
 .sampleBlock-caption {
   text-align: left;
