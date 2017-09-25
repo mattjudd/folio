@@ -73,18 +73,22 @@ $(document).ready(function() {
 //opening
 $(".work-box").click(function(){
 	var displayID = "#" + $(this).attr('id') + "-display";
+
 	$(displayID).show('fast');
+	$(".sampleBlock-footer").show('slow');
 });
 
 //closing display caption
-
+$(".hide-caption").click(function(){
+	$(".sampleBlock-footer").hide('fast');
+});
 
 //closing display
 function onHideRemoveiFrameSrc() {
 	$(".sampleBlock iframe").attr('src',"");
 }
 
-$(".sampleBlock-footer button").click(function(){
+$(".fancybox-close").click(function(){
 	$(".sampleBlock").hide('fast',onHideRemoveiFrameSrc);
 });
 $(document).mouseup(function(e)
