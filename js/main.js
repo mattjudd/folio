@@ -76,6 +76,9 @@ $(".work-box").click(function(){
 	$(displayID).show('fast');
 });
 
+//closing display caption
+
+
 //closing display
 function onHideRemoveiFrameSrc() {
 	$(".sampleBlock iframe").attr('src',"");
